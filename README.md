@@ -1,9 +1,9 @@
 # Shopify-Custom-Featured-Product-Slider
 Shopify Custom Featured Product Slider Source Code
 
-# Add this code in to your theme.liquid file under <head> </head> Tag
+# নিচের কোড গুলি theme.liquid ফাইলের মধ্যে <head> </head> Tag এর মধ্যে Paste করুন। 
 
-<div>
+
     <!-- jQuery CDN Start here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- jQuery CDN End here -->
@@ -22,108 +22,6 @@ Shopify Custom Featured Product Slider Source Code
     <!-- Slick slider CDN End here -->
 
     
-# Create a New section called "New Featured Products Slider" liquid file and add this below code in to this file 
+# Section ফল্ডারের মধ্যে একটি ফাইল তৈরি করুন যার নাম দিন "New Featured Products Slider" এবং এই ফাইলের মধ্যে  slider.liquid ফাইল থেকে কোডগুলো কপি করে "New Featured Products Slider" Section ফাইলের মধ্যে Paste করে দিন ।
 
-
-<section class="section__wrapper">
-
-    <div class="slider__contents__wrapper">
-
-        <div class="slider__title__content">
-            <h2 class="slider__title">{{ section.settings.heading }}</h2>
-        </div>
-        <!-- main slider start here -->
-        <div class="main__slider">
-
-{% for product in section.settings.products %}
-            <!-- Single Slide start here -->
-            <div class="single__slide">
-                <div class="slide__contents">
-                    <img src="{{ product.featured_image | image_url }}" width="" height="" alt="">
-                </div>
-
-                <div class="slide___reviews">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <span>125(Reviews)</span>
-                </div>
-
-                <div class="slide__info">
-                    <h2 class="slide__title">{{ product.title }} </h2>
-                    <p class="slider__price">{{ product.price | money }}</p>
-                </div>
-            </div>
-            <!-- Single Slide end here -->
-        {% endfor %}  
-
-        </div>
-        <!-- main slider end here -->
-    </div>
-</section>
-
-
-
-{% schema %}
-  {
-    "name": "New Product Slider",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Slider Heading",
-        "default": "Featured Products"
-      },
-      {
-        "type": "product_list",
-        "id": "products",
-        "label": "Select Your Products"
-      }
-    ],
-    "presets": [
-      {
-        "name": "New Product Slider"
-      }
-    ]
-  }
-{% endschema %}
-
-<script>
-$('.main__slider').slick({
-  draggable: true,
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
-</script>
-</div>
+# style.css ফাইল থেকে কোডগুলো কপি করে Assets ফল্ডারের মধ্যে যে মেইন css ফাইল আছে (যেমনঃ base.css, theme.css ইত্যাদি হতে পারে) সেই ফাইলের একদম নিছে Paste করে দিন। 

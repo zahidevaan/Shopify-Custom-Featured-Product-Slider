@@ -3,7 +3,7 @@ Shopify Custom Featured Product Slider Source Code
 
 # Add this code in to your theme.liquid file under <head> </head> Tag
 
-
+<div>
     <!-- jQuery CDN Start here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- jQuery CDN End here -->
@@ -126,3 +126,4 @@ $('.main__slider').slick({
   ]
 });
 </script>
+</div>
